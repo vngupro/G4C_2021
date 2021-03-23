@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\MouseLook.cs" />
      <None Include="Assets\Empty At Zero Creator\Documentation\Features.txt" />
      <None Include="Assets\Empty At Zero Creator\Documentation\How To Customize.txt" />
      <None Include="Assets\Empty At Zero Creator\Documentation\How To Use.txt" />
