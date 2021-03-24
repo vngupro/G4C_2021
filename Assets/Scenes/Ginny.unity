@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8476444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7432233761144756099, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+  m_PrefabInstance: {fileID: 7432233761136410783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &18579329
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  hasBadge: 0
 --- !u!114 &250034837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +562,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250034834}
   m_CullTransparentMesh: 1
+--- !u!1 &293202559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7432233761423125216, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+  m_PrefabInstance: {fileID: 7432233761136410783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295785623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ffaf999e5139ec40a3a9ca9da6b5fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maskInventory: {fileID: 8476444}
+  maskOpen: {fileID: 293202559}
 --- !u!114 &792698626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,7 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  hasBadge: 0
 --- !u!114 &825066204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,6 +1602,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007871005}
   m_CullTransparentMesh: 1
+--- !u!1 &1068217710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7432233760896748931, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+  m_PrefabInstance: {fileID: 7432233761136410783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068217713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068217710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ead7567c5271c4409d62efbd253dc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badges: []
 --- !u!1 &1085474890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  hasBadge: 0
 --- !u!114 &1238510219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,7 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  hasBadge: 0
 --- !u!114 &1387891102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2567,6 +2597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af32cb70e88b69a48a655013425d1132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badge: {fileID: 0}
+  hasBadge: 0
 --- !u!114 &1944627245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2786,6 +2818,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 792698624}
+    - target: {fileID: 7432233760122399424, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+      propertyPath: badgePool
+      value: 
+      objectReference: {fileID: 1068217713}
     - target: {fileID: 7432233760350776454, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
       propertyPath: m_Pivot.x
       value: 0

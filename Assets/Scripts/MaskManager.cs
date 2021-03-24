@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MaskManager : MonoBehaviour
 {
+    public GameObject maskInventory;
+    public GameObject maskOpen;
     public void OpenMask()
     {
-        Debug.Log("open Mask");
+        maskOpen.SetActive(false);
+        maskInventory.SetActive(true);
     }
 
     public void CloseMask()
     {
-        SceneManager.LoadScene("Ginny 1");
-        Debug.Log("close Mask");
+        maskOpen.SetActive(true);
+        maskInventory.SetActive(false);
     }
 }

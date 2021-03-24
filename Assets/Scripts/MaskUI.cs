@@ -11,22 +11,33 @@ public class MaskUI : MonoBehaviour
     public int nbBadgeRow = 5;
     public int nbBadgeColumn = 5;
 
+    private BadgePool badgePool;
     private void Awake()
     {
+        badgePool = GetComponent<BadgePool>();
         float badgeSize = firstSlot.GetComponent<RectTransform>().rect.width;
         float badgeGridWidth = maskBadgeGrid.GetComponent<RectTransform>().rect.width;
         badgeSize = badgeGridWidth / nbBadgeRow;
+        float badgePoolCount = badgePool.badges.Count;
+        int col = 0;
+        int row = 0;
+        int count = 0;
 
-        for(int col = 0; col < nbBadgeColumn; col++)
+        while(count < badgePoolCount && row < nbBadgeRow)
         {
-            for(int row = 0; row < nbBadgeRow; row++)
+            MaskBadgeSlot newBadgeSlot = Instantiate(badgeSlot, firstSlot.transform.position, firstSlot.transform.rotation);
+            newBadgeSlot.transform.SetParent(maskBadgeGrid.transform);
+            newBadgeSlot.transform.position = new Vector3(firstSlot.transform.position.x + badgeSize * col,
+                                                            firstSlot.transform.position.y - badgeSize * row,
+                                                            badgeSlot.transform.position.z);
+            newBadgeSlot.badge = badgePool.badges[count];
+            count++;
+            if ((col % nbBadgeColumn) == 4)
             {
-                MaskBadgeSlot newBadgeSlot = Instantiate(badgeSlot, firstSlot.transform.position, firstSlot.transform.rotation);
-                newBadgeSlot.transform.SetParent(maskBadgeGrid.transform);
-                newBadgeSlot.transform.position = new Vector3(firstSlot.transform.position.x + badgeSize * row,
-                                                              firstSlot.transform.position.y - badgeSize * col,
-                                                              badgeSlot.transform.position.z);
+                row++;
+                col = -1;
             }
+            col++;
         }
         Destroy(firstSlot);
     }

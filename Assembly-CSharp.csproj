@@ -56,16 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MouseDragBehaviour.cs" />
+    <Compile Include="Assets\ExitScene.cs" />
     <Compile Include="Assets\Scripts\Mask.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\CanvasSave.cs" />
     <Compile Include="Assets\Scripts\MaskSlot.cs" />
+    <Compile Include="Assets\Scripts\MaskUI.cs" />
     <Compile Include="Assets\Scripts\Attribute.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\MaskManager.cs" />
-    <Compile Include="Assets\ExitScene.cs" />
-    <Compile Include="Assets\Scripts\MaskUI.cs" />
     <Compile Include="Assets\Scripts\MaskBadgeSlot.cs" />
-    <Compile Include="Assets\Scripts\CanvasSave.cs" />
+    <Compile Include="Assets\Scripts\Badge.cs" />
+    <Compile Include="Assets\Scripts\BadgePool.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
