@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ginny.unity
-    guid: faeee0892c8f5ae43b05caf3fe2721b8
+    path: Assets/Scenes/Scene.unity
+    guid: 4f3d10f2772a5c84d9f88985234b196b
+  - enabled: 1
+    path: Assets/Scenes/Areas/PlayerRoom.unity
+    guid: 60eb73f534352dc448437bed75624618
+  - enabled: 1
+    path: Assets/Scenes/Areas/Outside.unity
+    guid: e6a46d6e3d2834e4687e63c6a56b7e38
+  - enabled: 1
+    path: Assets/Scenes/Areas/Library.unity
+    guid: 362710190d68c3844a33840259a807a8
   m_configObjects: {}
