@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Mask : MonoBehaviour
 {
-    private MaskSlot[] realSlot = new MaskSlot[3];
-    private MaskSlot[] fakeSlot = new MaskSlot[3];
+    public MaskSlot[] maslSlots;
 
+    public State state;
     private static Mask _instance;
     private void Awake()
     {
