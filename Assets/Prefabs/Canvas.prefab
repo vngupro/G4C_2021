@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  attribute: {fileID: 11400000, guid: 59ce75e83c2e7d142ae4ab580ea6e7e7, type: 2}
+  badge: {fileID: 0}
+  hasBadge: 0
 --- !u!1 &7432233759586898544
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +941,7 @@ GameObject:
   - component: {fileID: 7432233760122399425}
   - component: {fileID: 7432233760122399426}
   - component: {fileID: 7432233760122399424}
+  - component: {fileID: 6092733582874826896}
   m_Layer: 5
   m_Name: Mask_BadgeSlot
   m_TagString: Untagged
@@ -1016,6 +1019,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af32cb70e88b69a48a655013425d1132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badge: {fileID: 0}
+  hasBadge: 0
+--- !u!114 &6092733582874826896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432233760122399428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113176b1613750941b7080884ef894ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maskSlots:
+  - {fileID: 7432233760600991207}
+  - {fileID: 7432233761422724773}
+  - {fileID: 7432233759552691265}
+  - {fileID: 7432233761066105112}
 --- !u!1 &7432233760350776458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  attribute: {fileID: 11400000, guid: 59ce75e83c2e7d142ae4ab580ea6e7e7, type: 2}
+  badge: {fileID: 0}
+  hasBadge: 0
 --- !u!1 &7432233760659193687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1468,6 @@ GameObject:
   - component: {fileID: 7432233760803425637}
   - component: {fileID: 7432233760803425635}
   - component: {fileID: 7432233760803425636}
-  - component: {fileID: 879300093}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1509,23 +1532,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &879300093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7432233760803425638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113176b1613750941b7080884ef894ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maskSlots:
-  - {fileID: 7432233760600991211}
-  - {fileID: 7432233761422724777}
-  - {fileID: 7432233759552691269}
-  - {fileID: 7432233761066105116}
 --- !u!1 &7432233760896748931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7432233760896748930}
   - component: {fileID: 7432233760896748929}
+  - component: {fileID: 1068217713}
   m_Layer: 5
   m_Name: Mask_UI
   m_TagString: Untagged
@@ -1581,6 +1588,20 @@ MonoBehaviour:
   firstSlot: {fileID: 7432233760122399428}
   nbBadgeRow: 5
   nbBadgeColumn: 5
+--- !u!114 &1068217713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432233760896748931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ead7567c5271c4409d62efbd253dc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badges:
+  - {fileID: 11400000, guid: 4ca703a9a6ded904e95834c097806aa0, type: 2}
 --- !u!1 &7432233760942104427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  attribute: {fileID: 11400000, guid: 59ce75e83c2e7d142ae4ab580ea6e7e7, type: 2}
+  badge: {fileID: 0}
+  hasBadge: 0
 --- !u!1 &7432233761144756099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e351753e87374085d2e69ca15f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItemInHand: 0
+  attribute: {fileID: 11400000, guid: 59ce75e83c2e7d142ae4ab580ea6e7e7, type: 2}
+  badge: {fileID: 0}
+  hasBadge: 0
 --- !u!1 &7432233761423125216
 GameObject:
   m_ObjectHideFlags: 0
