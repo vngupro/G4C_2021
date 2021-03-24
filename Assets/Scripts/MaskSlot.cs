@@ -8,17 +8,11 @@ public class MaskSlot : MonoBehaviour
     public Badge badge;
     public bool hasBadge = false;
 
-    private void Awake()
-    {
-        
-    }
-
     private void Update()
     {
         if(hasBadge)
         {
             Debug.Log("Apply Badge");
-
         }
         else
         {

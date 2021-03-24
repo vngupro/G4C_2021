@@ -2589,6 +2589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   badge: {fileID: 0}
   hasBadge: 0
+  originPos: {x: 0, y: 0}
 --- !u!114 &1944627245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +2896,14 @@ PrefabInstance:
     - target: {fileID: 7432233760350776458, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432233760600991207, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+      propertyPath: attribute
+      value: 
+      objectReference: {fileID: 11400000, guid: 986c3df314cff1847a0dfbb78a69a5ea, type: 2}
+    - target: {fileID: 7432233761144756099, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432233761423125022, guid: 32f638594a3aee741b606bac5b7afc85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
