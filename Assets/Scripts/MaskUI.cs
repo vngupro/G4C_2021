@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MaskUI : MonoBehaviour
 {
     public GameObject maskBadgeGrid;
-    public MaskBadgeSlot badgeSlot;
+    public BadgeSlot badgeSlot;
     public GameObject firstSlot;
     public int nbBadgeRow = 5;
     public int nbBadgeColumn = 5;
@@ -25,7 +25,7 @@ public class MaskUI : MonoBehaviour
 
         while(count < badgePoolCount && row < nbBadgeRow)
         {
-            MaskBadgeSlot newBadgeSlot = Instantiate(badgeSlot, firstSlot.transform.position, firstSlot.transform.rotation);
+            BadgeSlot newBadgeSlot = Instantiate(badgeSlot, firstSlot.transform.position, firstSlot.transform.rotation);
             newBadgeSlot.transform.SetParent(maskBadgeGrid.transform);
             newBadgeSlot.transform.position = new Vector3(firstSlot.transform.position.x + badgeSize * col,
                                                             firstSlot.transform.position.y - badgeSize * row,
