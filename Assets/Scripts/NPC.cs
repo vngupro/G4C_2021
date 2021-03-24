@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    //public State state; 
-    public List<Dialogue> dialogues = new List<Dialogue>();
+
+    public List<NPCDialogue> dialogues = new List<NPCDialogue>();
 }
