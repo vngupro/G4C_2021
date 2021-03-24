@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\Attribute.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\MaskManager.cs" />
-    <Compile Include="Assets\Scripts\MaskBadgeSlot.cs" />
+    <Compile Include="Assets\Scripts\BadgeSlot.cs" />
+    <Compile Include="Assets\Scripts\DialogueType.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

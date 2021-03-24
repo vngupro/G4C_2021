@@ -3,19 +3,16 @@ using UnityEngine.EventSystems;
 
 public class MouseDragBehaviour : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    public GameObject[] maskSlots = new GameObject[4];
+    public MaskSlot[] maskSlots = new MaskSlot[4];
     private float maskSlotHalfWidth;
     private float maskSlotHalfHeight;
     
     private Vector2 lastMousePosition;
-    private Vector2 originPos;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         maskSlotHalfWidth = maskSlots[0].GetComponent<RectTransform>().rect.width / 2;
         maskSlotHalfHeight = maskSlots[0].GetComponent<RectTransform>().rect.height / 2;
-
-        originPos = transform.position;
         lastMousePosition = eventData.position;
     }
 
@@ -53,15 +50,20 @@ public class MouseDragBehaviour : MonoBehaviour, IDragHandler, IBeginDragHandler
                 && currentMousePos.y < maxYBound)
             {
                 transform.position = maskSlots[count].transform.position;
-                
                 isOnMaskSlot = true;
+                maskSlots[count].hasBadge = true;
+                maskSlots[count].badge = GetComponent<BadgeSlot>().badge;
             }
             count++;
         }
 
         if (!isOnMaskSlot)
         {
-            transform.position = originPos;
+            transform.position = GetComponent<BadgeSlot>().originPos;
+            foreach(MaskSlot maskSlot in maskSlots)
+            {
+                maskSlot.hasBadge = false;
+            }
         }
     }
 
