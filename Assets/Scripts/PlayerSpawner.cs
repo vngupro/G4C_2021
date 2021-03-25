@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour
 {
     public static PlayerSpawner _instance;
-
-    private void Start()
+    public CharacterMovement movement { get; set; }
+    private void Awake()
     {
         if (_instance != null)
         {
@@ -15,7 +15,10 @@ public class PlayerSpawner : MonoBehaviour
         else
         {
             _instance = this;
+            DontDestroyOnLoad(gameObject);
+            movement = GetComponent<CharacterMovement>();
+
         }
-        DontDestroyOnLoad(gameObject);
+
     }
 }

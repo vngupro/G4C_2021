@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using System;
+
 public class SceneLoader : MonoBehaviour
 {
     public CinemachineVirtualCamera cineCam;
     public GameObject playerPrefab;
-    private string exitName = "";
-    private string sceneToLoad = "";
+    private PlayerSpawner player;
+    private static string exitName = "";
+    private static string sceneToLoad = "";
 
     private static SceneLoader _instance;
     private void Awake()
@@ -17,40 +20,57 @@ public class SceneLoader : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            player = FindObjectOfType<PlayerSpawner>();
+
+            //Invoke ExitScene.cs
+            LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
 
-        //Invoke ExitScene.cs
-        LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
+         
+
+
     }
 
-    public void OnEnteredExitTrigger(ChangeSceneData data)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        exitName = data.exitName;
-        sceneToLoad = data.sceneName;
-        SceneManager.LoadScene(data.sceneName);
+        //Teleport Player
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        Debug.Log(sceneName);
-
         if (sceneName == sceneToLoad)
         {
+            Debug.Log(sceneName + " " + sceneToLoad);
             EntranceScene[] allEntrance = FindObjectsOfType<EntranceScene>();
+            
             foreach (EntranceScene entrance in allEntrance)
             {
                 if (entrance.lastExitName == exitName)
                 {
-                    PlayerSpawner player = FindObjectOfType<PlayerSpawner>();
+                    player.movement.controllerIsActive = false;
+                    
                     cineCam.Follow = player.transform;
                     cineCam.LookAt = player.transform;
                     player.transform.position = entrance.transform.position;
                     player.transform.rotation = entrance.transform.rotation;
-                    return;
+
+                    Debug.Log(entrance.lastExitName + " " + exitName);
+             
+                    player.movement.controllerIsActive = true;
                 }
             }
         }
+    }
+
+    public void OnEnteredExitTrigger(ChangeSceneData data)
+    {
+        //Load Scene
+        exitName = data.exitName;
+        sceneToLoad = data.sceneName;
+        SceneManager.LoadScene(data.sceneName); 
     }
  }
