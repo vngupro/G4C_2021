@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1341621520067235650}
   - component: {fileID: 1341621520067235653}
   - component: {fileID: 1341621520067235651}
-  - component: {fileID: 4714478283592320803}
+  - component: {fileID: 6539972206860123403}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -65,7 +65,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e21d49514137248956268169bf9cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1341621520067235653}
   speed: 13
   gravity: -64
   jumpHeight: 4
@@ -74,7 +73,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &4714478283592320803
+--- !u!114 &6539972206860123403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
