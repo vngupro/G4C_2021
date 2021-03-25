@@ -5,16 +5,17 @@ public class CameraManager : MonoBehaviour
 {
     public static CameraManager _instance;
 
-    private void Start()
+    private void Awake()
     {
         if (_instance != null)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
             _instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+
     }
 }

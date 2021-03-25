@@ -7,7 +7,7 @@ using System;
 
 public class SceneLoader : MonoBehaviour
 {
-    private CinemachineVirtualCamera cineCam;
+    public CinemachineVirtualCamera cineCam;
     private PlayerSpawner player;
     private static string exitName = "";
     private static string sceneToLoad = "";
@@ -21,7 +21,6 @@ public class SceneLoader : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
             player = FindObjectOfType<PlayerSpawner>();
-            cineCam = FindObjectOfType<CinemachineVirtualCamera>();
             //Invoke ExitScene.cs
             LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
         }
@@ -47,15 +46,13 @@ public class SceneLoader : MonoBehaviour
                 if (entrance.lastExitName == exitName)
                 {
                     player.movement.controllerIsActive = false;
-                    
                     cineCam.Follow = player.transform;
                     cineCam.LookAt = player.transform;
                     player.transform.position = entrance.transform.position;
                     player.transform.rotation = entrance.transform.rotation;
-
                     Debug.Log(entrance.lastExitName + " " + exitName);
-             
                     player.movement.controllerIsActive = true;
+                    return;
                 }
             }
         }
