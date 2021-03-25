@@ -20,4 +20,25 @@ public class Mask : MonoBehaviour
             Destroy(this);
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(state != State.NONE)
+            {
+                state++;
+            }
+            
+            Debug.Log("Remove = " + state);
+        }
+        else if(Input.GetMouseButtonDown(1))
+        {
+            if(state != State.FULLMASK)
+            {
+                state--;
+            }
+            Debug.Log("Add = " + state);
+        }
+    }
 }
