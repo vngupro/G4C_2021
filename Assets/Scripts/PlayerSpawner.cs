@@ -17,7 +17,6 @@ public class PlayerSpawner : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
             movement = GetComponent<CharacterMovement>();
-
         }
 
     }
