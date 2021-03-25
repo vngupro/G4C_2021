@@ -502,7 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - state: 0
-    dialogue: {fileID: 0}
+    dialogue: {fileID: 11400000, guid: a9aa565050b2dda4795e66d2705e45f2, type: 2}
 --- !u!4 &128658994
 Transform:
   m_ObjectHideFlags: 0
