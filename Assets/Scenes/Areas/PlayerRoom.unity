@@ -167,7 +167,7 @@ Transform:
   - {fileID: 122297820}
   - {fileID: 1864509799}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &290527107
 GameObject:
@@ -3489,7 +3489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341621520067235650, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1341621520067235650, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3541,7 +3541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341621520067235652, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player10
       objectReference: {fileID: 0}
     - target: {fileID: 1341621521274846164, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5717,7 +5717,7 @@ Transform:
   m_Children:
   - {fileID: 290527112}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1476123758
 GameObject:
@@ -5755,7 +5755,7 @@ Transform:
   - {fileID: 1792600642}
   - {fileID: 845880560}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1476525116
 Mesh:
@@ -6012,7 +6012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &1579570008
 Mesh:
@@ -6850,7 +6850,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1641225778 stripped
 MonoBehaviour:
@@ -9104,11 +9104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544157266929653193, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
       propertyPath: exitName
-      value: RoomToCorridor1
+      value: RoomToCorrider1
       objectReference: {fileID: 0}
     - target: {fileID: 5544157266929653194, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5544157266929653194, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
       propertyPath: m_LocalPosition.x

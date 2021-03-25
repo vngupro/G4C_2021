@@ -3816,7 +3816,7 @@ Transform:
   - {fileID: 1010805250}
   - {fileID: 1547625872}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &552303940
 PrefabInstance:
@@ -3965,7 +3965,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341621520067235650, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1341621520067235650, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5763,50 +5763,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &879124530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 879124531}
-  - component: {fileID: 879124532}
-  m_Layer: 0
-  m_Name: Entrance
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &879124531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879124530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1645924700}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &879124532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879124530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8dd24cf08d78324b80e04ce38f49dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastExitName: Corridor2
 --- !u!43 &897685614
 Mesh:
   m_ObjectHideFlags: 0
@@ -9370,11 +9326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1645924700 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5544157266929653194, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
-  m_PrefabInstance: {fileID: 5544157265021584319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1667193096
 Mesh:
   m_ObjectHideFlags: 0
@@ -10234,7 +10185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cineCam: {fileID: 1547625871}
-  playerPrefab: {fileID: 1341621520067235652, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
 --- !u!4 &1983053651
 Transform:
   m_ObjectHideFlags: 0
@@ -10247,7 +10197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2013205364
 Mesh:
@@ -11054,6 +11004,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1671887268, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671887269, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
+      propertyPath: lastExitName
+      value: Corridor2
+      objectReference: {fileID: 0}
     - target: {fileID: 5544157266929653193, guid: 531f5200bcd2f5f43a8399d4f414663c, type: 3}
       propertyPath: exitName
       value: Cafet
