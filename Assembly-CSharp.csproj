@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MouseDragBehaviour.cs" />
     <Compile Include="Assets\Scripts\BadgePool.cs" />
+    <Compile Include="Assets\Scripts\LevelEvent.cs" />
     <Compile Include="Assets\Scripts\Badge.cs" />
     <Compile Include="Assets\Scripts\ExitScene.cs" />
     <Compile Include="Assets\Scripts\Mask.cs" />
@@ -68,13 +69,16 @@
     <Compile Include="Assets\Scripts\Attribute.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\MaskManager.cs" />
-    <Compile Include="Assets\Scripts\BadgeSlot.cs" />
+    <Compile Include="Assets\Scripts\NPCDialogue.cs" />
+    <Compile Include="Assets\Scripts\StateCollection.cs" />
+    <Compile Include="Assets\Scripts\EntranceScene.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueType.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
-    <Compile Include="Assets\Scripts\StateCollection.cs" />
-    <Compile Include="Assets\Scripts\SpawnManager.cs" />
-    <Compile Include="Assets\Scripts\NPCDialogue.cs" />
+    <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\BadgeSlot.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
