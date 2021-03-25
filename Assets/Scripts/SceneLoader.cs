@@ -50,7 +50,7 @@ public class SceneLoader : MonoBehaviour
                     cineCam.Follow = player.transform;
                     cineCam.LookAt = player.transform;
                     player.transform.position = entrance.transform.position;
-                    player.transform.rotation = entrance.transform.rotation;
+                    player.transform.rotation = Quaternion.Euler(0, 0, 0);
                     Debug.Log(entrance.lastExitName + " " + exitName);
                     player.movement.controllerIsActive = true;
                     return;
