@@ -21,8 +21,8 @@ public class SoundManager : MonoBehaviour
                 s.source.volume = s.volume;
                 s.source.pitch = s.pitch;
                 s.source.spatialBlend = s.spatialBlend;
-                s.source.minDistance = s.minDist3D;
-                s.source.maxDistance = s.maxDist3D;
+                //s.source.minDistance = s.minDist3D;
+                //s.source.maxDistance = s.maxDist3D;
                 s.source.mute = s.mute;
                 s.source.loop = s.loop;
                 s.source.playOnAwake = s.playOnAwake;
@@ -62,7 +62,7 @@ public class Sound
     public float pitch = 1f;
     [Range(0f, 1f)]
     public float spatialBlend = 0f;
-    public float minDist3D = 100f;
+    public float minDist3D = 1f;
     public float maxDist3D = 500f;
     public bool mute = false;
     public bool loop = false;
