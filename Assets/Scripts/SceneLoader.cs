@@ -24,8 +24,11 @@ public class SceneLoader : MonoBehaviour
             cineCam = FindObjectOfType<CinemachineVirtualCamera>();
             //Invoke ExitScene.cs
             LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
+
+            //couragebar.cs
             LevelEvent.onVictory.AddListener(ShowVictoryScreen);
             LevelEvent.onDefeat.AddListener(ShowDefeatScreen);
+            LevelEvent.gotMaxCourage.AddListener(ShowVictoryScreen);
         }
         else
         {
@@ -35,12 +38,15 @@ public class SceneLoader : MonoBehaviour
 
     private void ShowDefeatScreen()
     {
-        SceneManager.LoadScene("VictoryScreen");
+        SceneManager.LoadScene("DefeatScreen");
     }
 
     private void ShowVictoryScreen()
     {
-        SceneManager.LoadScene("DefeatScreen");
+        if (SceneManager.GetActiveScene().name == "Gym")
+        {
+            SceneManager.LoadScene("VictoryScreen");
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
