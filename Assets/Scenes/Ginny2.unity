@@ -467,6 +467,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 70920815, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1057602305, guid: 62829ac7429ca8d4aa889f6eca3a88be, type: 3}
       propertyPath: maslSlots.Array.data[0]
       value: 
@@ -4060,10 +4064,6 @@ PrefabInstance:
     - target: {fileID: 3596434532748854331, guid: e17b7f0589081f1459da25e4b7d77855, type: 3}
       propertyPath: m_Name
       value: SoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596434532748854332, guid: e17b7f0589081f1459da25e4b7d77855, type: 3}
-      propertyPath: MinDistance
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3596434532748854333, guid: e17b7f0589081f1459da25e4b7d77855, type: 3}
       propertyPath: m_RootOrder
