@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 8c
   m_EditorClassIdentifier: 
-  dialogue: "On the other hand, I\u2019m just like \"Ooh! Repeatable patterns! AND
-    BASS.\""
+  text: "On the other hand, I\u2019m just like \u2018Ooh! Repeatable patterns! AND
+    BASS.\u201D"
   dialogueType: {fileID: 11400000, guid: b98f013dedc56274cad9af8e2b7eea98, type: 2}

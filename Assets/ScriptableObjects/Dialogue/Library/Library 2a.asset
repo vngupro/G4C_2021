@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Library 2a
   m_EditorClassIdentifier: 
-  dialogue: So their pronouns are they/them?
+  text: 'So their pronouns are they/them? '
   dialogueType: {fileID: 11400000, guid: 408cd5db1fd003648b759c45ece14a68, type: 2}

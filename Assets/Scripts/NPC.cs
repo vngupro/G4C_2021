@@ -9,19 +9,42 @@ public class NPC : MonoBehaviour
     [SerializeField]
     public TMP_Text dialogueBox;
     public bool canGetLastDialogue = false;
+    public bool canShowDialogue = false;
     private void Start()
     {
-        dialogueBox.text = dialogues[0].dialogue.text; 
+        dialogueBox.text = dialogues[0].dialogue.text;
+        dialogueBox.enabled = false;
     }
 
+    public void CanShowDialogue(bool value)
+    {
+        canShowDialogue = value;
+        dialogueBox.enabled = value;
+        if (!value) { dialogueBox.text = "";  }
+        Debug.Log("can show dialogue");
+    }
     public void ChangeDialogue(State state)
     {
-        foreach(NPCDialogue dialogue in dialogues)
+        if (canShowDialogue)
         {
-            if(dialogue.state == state)
+            foreach (NPCDialogue dialogue in dialogues)
             {
-                dialogueBox.text = dialogue.dialogue.text;
+                if (!canGetLastDialogue)
+                {
+                    if (dialogue.state == state && state != State.FULLMASK)
+                    {
+                        dialogueBox.text = dialogue.dialogue.text;
+                    }
+                }
+                else
+                {
+                    if (dialogue.state == state)
+                    {
+                        dialogueBox.text = dialogue.dialogue.text;
+                    }
+                }
             }
+            Debug.Log("Get New Dialogue ");
         }
     }
 

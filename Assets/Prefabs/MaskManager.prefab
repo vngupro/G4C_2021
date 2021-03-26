@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4903140949390162977}
   - component: {fileID: 4903140949390163422}
-  - component: {fileID: 4903140949390163420}
   m_Layer: 0
   m_Name: MaskManager
   m_TagString: Untagged
@@ -51,17 +50,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskInventory: {fileID: 0}
   maskOpen: {fileID: 0}
---- !u!114 &4903140949390163420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4903140949390162976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab4343eb07a79646b205ce59161b165, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maslSlots: []
-  state: 0

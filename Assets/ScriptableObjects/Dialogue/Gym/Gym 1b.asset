@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 1b
   m_EditorClassIdentifier: 
-  dialogue: "It\u2019s not a party if you can\u2019t feel the bass!"
+  text: "It\u2019s not a party if you can\u2019t feel the bass! "
   dialogueType: {fileID: 11400000, guid: 408cd5db1fd003648b759c45ece14a68, type: 2}

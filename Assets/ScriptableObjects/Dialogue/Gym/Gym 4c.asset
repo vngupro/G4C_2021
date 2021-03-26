@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 4c
   m_EditorClassIdentifier: 
-  dialogue: "Don\u2019t be such a buzzkill. It\u2019ll be fun!"
+  text: "Don\u2019t be such a buzzkill. It\u2019ll be fun!"
   dialogueType: {fileID: 11400000, guid: ba4ddc8960fd045418f9c6007467238f, type: 2}

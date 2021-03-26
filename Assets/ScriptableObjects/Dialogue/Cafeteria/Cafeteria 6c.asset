@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Cafeteria 6c
   m_EditorClassIdentifier: 
-  dialogue: I just hate the texture of it, you know?
+  text: I just hate the texture of it, you know?
   dialogueType: {fileID: 11400000, guid: b98f013dedc56274cad9af8e2b7eea98, type: 2}
