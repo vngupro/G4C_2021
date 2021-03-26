@@ -38,7 +38,7 @@ public class NPC : MonoBehaviour
 
             if(state == State.NONE)
             {
-                if (dialogueType.name == "Negative") braveValue = -braveValue;
+                //CourageBar.cs
                 LevelEvent.onNoMask.Invoke(braveValue);
             }
         }

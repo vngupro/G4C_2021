@@ -7,15 +7,13 @@ public class PlayerListen : MonoBehaviour
     public LayerMask layer;
     private float minDistToTalk = 8.0f;
     private Collider npc;
-    private Mask mask;
+    public MaskManager mask;
+
+    private int count = 0;
     private void Awake()
     {
         //mask.cs
         LevelEvent.onChangeMask.AddListener(ListenAgain);
-    }
-    private void Start()
-    {
-        mask = GetComponent<Mask>();
     }
 
     // Update is called once per frame
@@ -25,10 +23,6 @@ public class PlayerListen : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            if (npc != null)
-            {
-                npc.SendMessage("CanShowDialogue", false);
-            }
             if (Physics.Raycast(ray, out hitInfo, 500, layer))
             {
                 Vector3 playerPos = transform.position;
@@ -42,8 +36,26 @@ public class PlayerListen : MonoBehaviour
                     hitInfo.collider.SendMessage("ChangeDialogue", mask.state);
                     
                     npc = hitInfo.collider;
-
-                    
+                    switch (count)
+                    {
+                        case 0:
+                            FindObjectOfType<SoundManager>().PlaySound("Pop1");
+                            break;
+                        case 1:
+                            FindObjectOfType<SoundManager>().PlaySound("Pop2");
+                            break;
+                        case 2:
+                            FindObjectOfType<SoundManager>().PlaySound("Pop3");
+                            break;
+                        default:
+                            FindObjectOfType<SoundManager>().PlaySound("Pop1");
+                            break;
+                    }
+                    count++;
+                    if(count >= 3)
+                    {
+                        count = 0;
+                    }
                 }
             }
         }

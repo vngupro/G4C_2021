@@ -1261,6 +1261,8 @@ GameObject:
   - component: {fileID: 7432233760350776456}
   - component: {fileID: 7432233760350776457}
   - component: {fileID: 3258206058099797552}
+  - component: {fileID: 7628704684750197638}
+  - component: {fileID: 2839139143716769946}
   m_Layer: 5
   m_Name: MaskManager
   m_TagString: Untagged
@@ -1371,6 +1373,40 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 21dc9649b6ff605498c22af888f0a99b, type: 3}
   - {fileID: 21300000, guid: a7f465451fceab24c8d9d2fea10d784b, type: 3}
   - {fileID: 21300000, guid: 6af9751f74a82394f9579059552cbe4d, type: 3}
+  layer:
+    serializedVersion: 2
+    m_Bits: 32
+  state: 0
+--- !u!114 &7628704684750197638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432233760350776458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc375a022394ec4c9f7a19f10a12fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectNameToHit: Mask_Open
+--- !u!114 &2839139143716769946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432233760350776458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 32
 --- !u!1 &7432233760384690409
 GameObject:
   m_ObjectHideFlags: 0
