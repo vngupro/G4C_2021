@@ -1778,12 +1778,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - audio: {fileID: 8300000, guid: db9c07be89013eb4b9fcedb7afa63788, type: 3}
+  - name: 
+    clip: {fileID: 0}
     volume: 0.1
     pitch: 0
     spatialBlend: 0
     minDist3D: 0
     maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
 --- !u!4 &894194908
 Transform:
   m_ObjectHideFlags: 0
@@ -3953,6 +3958,10 @@ PrefabInstance:
     - target: {fileID: 1463421616281502918, guid: bc3856a684837b545a7f350796933efe, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301377854952627431, guid: bc3856a684837b545a7f350796933efe, type: 3}
+      propertyPath: m_Radius
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8767812242448064281, guid: bc3856a684837b545a7f350796933efe, type: 3}
       propertyPath: m_Camera

@@ -28,6 +28,7 @@ public class Mask : MonoBehaviour
             if(state != State.NONE)
             {
                 state++;
+                //playerListen.cs
                 LevelEvent.onChangeMask.Invoke(state);
             }
             Debug.Log("Remove = " + state);

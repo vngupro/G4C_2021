@@ -51,4 +51,20 @@ public class NPC : MonoBehaviour
         canGetLastDialogue = value;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CanShowDialogue(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CanShowDialogue(false);
+        }
+    }
+
 }
