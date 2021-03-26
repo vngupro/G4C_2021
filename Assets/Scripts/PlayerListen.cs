@@ -40,7 +40,10 @@ public class PlayerListen : MonoBehaviour
                 {
                     hitInfo.collider.SendMessage("CanShowDialogue", true);
                     hitInfo.collider.SendMessage("ChangeDialogue", mask.state);
+                    
                     npc = hitInfo.collider;
+
+                    
                 }
             }
         }

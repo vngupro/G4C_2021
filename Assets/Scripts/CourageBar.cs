@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class CourageBar : MonoBehaviour
+
+public class CourageBar: MonoBehaviour
 {
+    public float maxCourage = 100;
+    public float currentCourage;
+    public CourageBarUI couragebar;
 
-    public Slider slider;
-    public Gradient gradient;
-    public Image fill;
-   
-   public void SetMaxCourage (int courage) 
-   {
-       slider.maxValue = courage;
-       slider.value = courage;
+    private void Awake()
+    {
+        LevelEvent.onNoMask.AddListener(TakeDamage);
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentCourage = maxCourage;
+        couragebar.SetMaxCourage(maxCourage);
+    }
 
-       fill.color = gradient.Evaluate(1f);
-   }
-   public void SetCourage(int courage) 
-   {
-       slider.value = courage;
-
-       fill.color = gradient.Evaluate(slider.normalizedValue);
-   }
+    void TakeDamage (float damage) 
+    {
+        currentCourage += damage;
+        couragebar.SetCourage(currentCourage);
+    }
 }

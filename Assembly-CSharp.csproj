@@ -52,11 +52,11 @@
      <Compile Include="Assets\Scripts\LevelEvent.cs" />
      <Compile Include="Assets\Scripts\Badge.cs" />
      <Compile Include="Assets\Scripts\PlayerListen.cs" />
-     <Compile Include="Assets\Scripts\CourageBar.cs" />
+     <Compile Include="Assets\Scripts\CourageBarUI.cs" />
      <Compile Include="Assets\Scripts\ExitScene.cs" />
      <Compile Include="Assets\Scripts\Mask.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\CourageBar.cs" />
      <Compile Include="Assets\Scripts\MaskSlot.cs" />
      <Compile Include="Assets\Scripts\MaskUI.cs" />
      <Compile Include="Assets\Scripts\Attribute.cs" />
