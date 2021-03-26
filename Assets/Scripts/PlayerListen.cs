@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerListen : MonoBehaviour
 {
+    List<Collider> savedFarNpcs = new List<Collider>();
+    public LayerMask layer;
+    private float minDistToTalk = 8.0f;
+    private Collider npc;
+
     SphereCollider sphere;
     Mask mask;
-    List<Collider> savedFarNpcs = new List<Collider>();
-
     private void Awake()
     {
         //mask.cs
@@ -19,32 +22,38 @@ public class PlayerListen : MonoBehaviour
         mask = GetComponent<Mask>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    // Update is called once per frame
+    void Update()
     {
-        if (other.CompareTag("npc"))
+        if (Input.GetMouseButtonDown(0))
         {
-            Collider[] hitFarNpcs = Physics.OverlapSphere(transform.position, sphere.radius);
-            savedFarNpcs.Clear();
-            foreach (var farNpc in hitFarNpcs)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if (npc != null)
             {
-                if (farNpc.CompareTag("npc"))
+                npc.SendMessage("CanShowDialogue", false);
+            }
+            if (Physics.Raycast(ray, out hitInfo, 500, layer))
+            {
+                Vector3 playerPos = transform.position;
+                Vector3 npcPos = hitInfo.transform.position;
+                Vector3 player2npc = npcPos - playerPos;
+                float mPlayer2npc = player2npc.magnitude;
+
+                if(mPlayer2npc < minDistToTalk)
                 {
-                    farNpc.SendMessage("ChangeDialogue", mask.state);
-                    savedFarNpcs.Add(farNpc);
+                    hitInfo.collider.SendMessage("CanShowDialogue", true);
+                    hitInfo.collider.SendMessage("ChangeDialogue", mask.state);
+                    npc = hitInfo.collider;
                 }
             }
         }
     }
-
     public void ListenAgain(State _state)
     {
-        Collider[] hitSphereColliders = Physics.OverlapSphere(transform.position, sphere.radius);
-        foreach (var hitSphereCollider in hitSphereColliders)
+        if(npc != null)
         {
-            if (hitSphereCollider.CompareTag("npc"))
-            {
-                hitSphereCollider.SendMessage("ChangeDialogue", _state);
-            }
+            npc.SendMessage("ChangeDialogue", mask.state);
         }
     }
 }

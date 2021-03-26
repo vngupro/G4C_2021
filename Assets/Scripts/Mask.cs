@@ -23,7 +23,9 @@ public class Mask : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.F) ) 
+            //|| Input.GetKeyDown(KeyCode.RightArrow))
         {
             if(state != State.NONE)
             {
@@ -33,7 +35,9 @@ public class Mask : MonoBehaviour
             }
             Debug.Log("Remove = " + state);
         }
-        else if(Input.GetMouseButtonDown(1))
+        //else if(Input.GetMouseButtonDown(1))
+        else if(Input.GetKeyDown(KeyCode.E) )
+            //|| Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(state != State.FULLMASK)
             {

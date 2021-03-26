@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
         canShowDialogue = value;
         dialogueBox.enabled = value;
         if (!value) { dialogueBox.text = "";  }
-        Debug.Log("can show dialogue");
+        Debug.Log("can show dialogue = " + value);
     }
     public void ChangeDialogue(State state)
     {
@@ -45,19 +45,19 @@ public class NPC : MonoBehaviour
         }
     }
 
-    public void CanGetLastDialogue(bool value)
-    {
-        Debug.Log("Get Last Dialogue");
-        canGetLastDialogue = value;
-    }
+    //public void CanGetLastDialogue(bool value)
+    //{
+    //    Debug.Log("Get Last Dialogue");
+    //    canGetLastDialogue = value;
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            CanShowDialogue(true);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        CanShowDialogue(true);
+    //    }
+    //}
 
     private void OnTriggerExit(Collider other)
     {
