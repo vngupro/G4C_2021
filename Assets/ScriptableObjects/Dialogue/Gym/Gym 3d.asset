@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 3d
   m_EditorClassIdentifier: 
-  dialogue: Did they give a neighboring kingdom a huge economic boost in the textile
+  text: Did they give a neighboring kingdom a huge economic boost in the textile
     trade?
   dialogueType: {fileID: 11400000, guid: 408cd5db1fd003648b759c45ece14a68, type: 2}

@@ -6,8 +6,11 @@ using UnityEngine.Events;
 public static class LevelEvent 
 {
     public static ChangeSceneEvent onChangeScene = new ChangeSceneEvent();
+    public static ChangeMaskEvent onChangeMask = new ChangeMaskEvent();
+    public static UnityEvent onNoMask = new UnityEvent();
 }
 
+public class ChangeMaskEvent : UnityEvent<State> { }
 public class ChangeSceneEvent : UnityEvent<ChangeSceneData>{ }
 public class ChangeSceneData
 {

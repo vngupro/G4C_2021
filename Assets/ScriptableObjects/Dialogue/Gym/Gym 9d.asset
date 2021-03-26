@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 9d
   m_EditorClassIdentifier: 
-  dialogue: "Yeah, just a big heckin\u2019 doggo. Big pupper hugs."
+  text: "Yeah, just a big heckin\u2019 doggo. Big pupper hugs."
   dialogueType: {fileID: 11400000, guid: 408cd5db1fd003648b759c45ece14a68, type: 2}

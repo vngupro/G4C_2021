@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
     [TextArea(4, 6)]
-    public string dialogue;
+    public string text;
 
     public DialogueType dialogueType;
 }

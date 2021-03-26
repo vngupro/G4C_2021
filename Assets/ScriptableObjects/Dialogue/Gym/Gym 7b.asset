@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9928bd2fd3a3024993d440f2b68b3b0, type: 3}
   m_Name: Gym 7b
   m_EditorClassIdentifier: 
-  dialogue: "She\u2019s just so...arrogant, you know?"
+  text: "She\u2019s just so...arrogant, you know? "
   dialogueType: {fileID: 11400000, guid: ba4ddc8960fd045418f9c6007467238f, type: 2}
