@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-
     public int maxCourage = 100;
     public int currentCourage;
 
