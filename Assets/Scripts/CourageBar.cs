@@ -75,5 +75,10 @@ public class CourageBar: MonoBehaviour
             Debug.Log("Heal");
         }
         
+        if(currentCourage <= 0f)
+        {
+            //sceneLoader.cs
+            LevelEvent.onDefeat.Invoke();
+        }
     }
 }

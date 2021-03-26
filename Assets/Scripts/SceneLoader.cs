@@ -24,12 +24,23 @@ public class SceneLoader : MonoBehaviour
             cineCam = FindObjectOfType<CinemachineVirtualCamera>();
             //Invoke ExitScene.cs
             LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
+            LevelEvent.onVictory.AddListener(ShowVictoryScreen);
+            LevelEvent.onDefeat.AddListener(ShowDefeatScreen);
         }
         else
         {
             Destroy(this.gameObject);
         }
+    }
 
+    private void ShowDefeatScreen()
+    {
+        SceneManager.LoadScene("VictoryScreen");
+    }
+
+    private void ShowVictoryScreen()
+    {
+        SceneManager.LoadScene("DefeatScreen");
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
