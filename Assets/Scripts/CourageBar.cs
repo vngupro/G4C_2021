@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using System;
+
 public class CourageBar: MonoBehaviour
 {
     public float maxCourage = 100.0f;
@@ -21,8 +23,17 @@ public class CourageBar: MonoBehaviour
         LevelEvent.onNoMask.AddListener(TakeDamage);
         LevelEvent.onCollide.AddListener(TakeDamage);
 
+        //sceneloader.cs
+        LevelEvent.onGetToLastScene.AddListener(ChangeSceneCost);
         source = GetComponent<CinemachineImpulseSource>();
     }
+
+    private void ChangeSceneCost()
+    {
+        currentCourage -= 20;
+        couragebar.SetCourage(currentCourage);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +94,7 @@ public class CourageBar: MonoBehaviour
 
         if(currentCourage >= maxCourage)
         {
+            currentCourage = maxCourage;
             //sceneLoader.cs
             LevelEvent.gotMaxCourage.Invoke();
         }

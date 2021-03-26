@@ -72,6 +72,8 @@ public class SceneLoader : MonoBehaviour
                 }
             }
         }
+
+
     }
 
     public void OnEnteredExitTrigger(ChangeSceneData data)
@@ -79,6 +81,11 @@ public class SceneLoader : MonoBehaviour
         //Load Scene
         exitName = data.exitName;
         sceneToLoad = data.sceneName;
+        if (sceneToLoad == "Gym")
+        {
+            //couragebar.cs
+            LevelEvent.onGetToLastScene.Invoke();
+        }
         SceneManager.LoadScene(data.sceneName); 
     }
  }
