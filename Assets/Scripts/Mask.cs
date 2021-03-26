@@ -7,6 +7,8 @@ public class Mask : MonoBehaviour
     public MaskSlot[] maslSlots;
     public State state;
 
+    public KeyCode upMask = KeyCode.E;
+    public KeyCode downMask = KeyCode.F;
     //private static Mask _instance;
     //private void Awake()
     //{
@@ -23,26 +25,24 @@ public class Mask : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        if(Input.GetKeyDown(KeyCode.F) ) 
-            //|| Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(upMask) ) 
         {
             if(state != State.NONE)
             {
                 state++;
                 //playerListen.cs
                 LevelEvent.onChangeMask.Invoke(state);
+                FindObjectOfType<SoundManager>().PlaySound("UpMask");
             }
             Debug.Log("Remove = " + state);
         }
-        //else if(Input.GetMouseButtonDown(1))
-        else if(Input.GetKeyDown(KeyCode.E) )
-            //|| Input.GetKeyDown(KeyCode.LeftArrow))
+        else if(Input.GetKeyDown(downMask) )
         {
             if(state != State.FULLMASK)
             {
                 state--;
                 LevelEvent.onChangeMask.Invoke(state);
+                FindObjectOfType<SoundManager>().PlaySound("DownMask");
             }
             Debug.Log("Add = " + state);
         }

@@ -21,12 +21,13 @@ public class SoundManager : MonoBehaviour
                 s.source.volume = s.volume;
                 s.source.pitch = s.pitch;
                 s.source.spatialBlend = s.spatialBlend;
-                s.source.minDistance = s.minDist3D;
-                s.source.maxDistance = s.maxDist3D;
+                //s.source.minDistance = s.minDist3D;
+                //s.source.maxDistance = s.maxDist3D;
                 s.source.mute = s.mute;
                 s.source.loop = s.loop;
                 s.source.playOnAwake = s.playOnAwake;
             }
+
         }
         else
         {
@@ -36,9 +37,14 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-       //Add the music to play at start
+
+        //Add the music to play at start
+        Sound s = Array.Find(sounds, sound => sound.name == "Background");
+        if (s == null) {  return; }       
+        s.source.Play();
     }
 
+    //How to use : FindObjectOfType<SoundManager>().PlaySound(name);
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -59,10 +65,10 @@ public class Sound
     [Range(0f, 1f)]
     public float volume = 0.1f;
     [Range(-3f, 3f)]
-    public float pitch = 1f;
+    public float pitch = 1.0f;
     [Range(0f, 1f)]
     public float spatialBlend = 0f;
-    public float minDist3D = 100f;
+    public float minDist3D = 1f;
     public float maxDist3D = 500f;
     public bool mute = false;
     public bool loop = false;

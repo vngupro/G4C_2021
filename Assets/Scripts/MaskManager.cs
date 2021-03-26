@@ -10,11 +10,22 @@ public class MaskManager : MonoBehaviour
     public Image image;
     public TMP_Text textBox;
     public Sprite[] sprites;
+
+    public static MaskManager instance;
     private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
         LevelEvent.onChangeMask.AddListener(ChangeMaskUI);
     }
-
+   
     public void ChangeMaskUI(State state)
     {
         switch (state)
