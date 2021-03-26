@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
+using UnityEngine.UI;
 public class CourageBar: MonoBehaviour
 {
     public float maxCourage = 100.0f;
     public float startCourage = 80.0f;
     public float currentCourage;
     public CourageBarUI couragebar;
+    public Image redScreen;
+    public Image greenScreen;
+    public float fadeScreenFactor = 0.1f;
+
+    private CinemachineImpulseSource source;
 
     private void Awake()
     {
         //NPC.cs
         LevelEvent.onNoMask.AddListener(TakeDamage);
+        LevelEvent.onCollide.AddListener(TakeDamage);
+
+        source = GetComponent<CinemachineImpulseSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -20,11 +29,51 @@ public class CourageBar: MonoBehaviour
         currentCourage = startCourage;
         couragebar.SetMaxCourage(maxCourage);
         couragebar.SetCourage(currentCourage);
+
+        greenScreen.enabled = false;
+        redScreen.enabled = false;
     }
 
-    void TakeDamage (float damage) 
+    void Update()
+    {
+        if (redScreen.enabled)
+        {
+            Color color = redScreen.color;
+            color.a -= fadeScreenFactor;
+            if(color.a <= 0f)
+            {
+                redScreen.enabled = false;
+            }
+        }
+
+        if (greenScreen.enabled)
+        {
+            Color color = greenScreen.color;
+            color.a -= fadeScreenFactor;
+
+            if (color.a <= 0f)
+            {
+                greenScreen.enabled = false;
+            }
+        }
+    }
+    void TakeDamage(float damage)
     {
         currentCourage += damage;
         couragebar.SetCourage(currentCourage);
+        if(damage < 0f)
+        {
+            source.GenerateImpulse();
+            redScreen.enabled = true;
+            FindObjectOfType<SoundManager>().PlaySound("Damage");
+
+        }
+        else
+        {
+            greenScreen.enabled = true;
+            FindObjectOfType<SoundManager>().PlaySound("Heal");
+            Debug.Log("Heal");
+        }
+        
     }
 }

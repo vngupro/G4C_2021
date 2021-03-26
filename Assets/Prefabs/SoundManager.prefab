@@ -110,3 +110,25 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 1
     source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 7e746f5eca79db84280596a26884f28a, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    minDist3D: 0
+    maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: 7e5adc3a7ea597147a7552869d9c0047, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    minDist3D: 0
+    maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
