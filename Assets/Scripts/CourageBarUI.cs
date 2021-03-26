@@ -11,8 +11,6 @@ public class CourageBarUI : MonoBehaviour
    public void SetMaxCourage (float courage) 
    {
        slider.maxValue = courage;
-       slider.value = courage;
-       fill.color = gradient.Evaluate(1f);
    }
 
    public void SetCourage(float courage) 

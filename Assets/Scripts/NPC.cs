@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour
     [SerializeField]
     public TMP_Text dialogueBox;
     private bool canShowDialogue = false;
-
+    private DialogueType dialogueType;
     public float braveValue = 0;
     private void Start()
     {
@@ -32,18 +32,15 @@ public class NPC : MonoBehaviour
                 if (dialogue.state == state)
                 {
                     dialogueBox.text = dialogue.dialogue.text;
+                    dialogueType = dialogue.dialogue.dialogueType;
                 }
             }
 
             if(state == State.NONE)
             {
+                //CourageBar.cs
                 LevelEvent.onNoMask.Invoke(braveValue);
             }
-        }
-
-        if(state == State.NONE)
-        {
-            LevelEvent.onNoMask.Invoke(braveValue);
         }
     }
 

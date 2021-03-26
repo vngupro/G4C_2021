@@ -77,3 +77,36 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 1
     source: {fileID: 0}
+  - name: Pop1
+    clip: {fileID: 8300000, guid: db9c07be89013eb4b9fcedb7afa63788, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    minDist3D: 0
+    maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: Pop2
+    clip: {fileID: 8300000, guid: 0fcb32f4f8fabc54da28184558fb6ed1, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    minDist3D: 0
+    maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: Pop3
+    clip: {fileID: 8300000, guid: 5480749feda4e624a9c28806c8a44d59, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    minDist3D: 0
+    maxDist3D: 0
+    mute: 0
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
