@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCourage: 100
   currentCourage: 0
-  couragebar: {fileID: 0}
+  couragebar: {fileID: 6923055388047630988}
 --- !u!1 &1341621520375951123
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,3 +461,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3329410478998297973, guid: 143fad8fa90cbbe4988354473216011c, type: 3}
   m_PrefabInstance: {fileID: 5631701866979647483}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6923055388047630988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3329410477701152119, guid: 143fad8fa90cbbe4988354473216011c, type: 3}
+  m_PrefabInstance: {fileID: 5631701866979647483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e99d70f616170b48ac01529b1a23f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
