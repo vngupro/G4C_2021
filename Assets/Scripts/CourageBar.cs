@@ -80,5 +80,11 @@ public class CourageBar: MonoBehaviour
             //sceneLoader.cs
             LevelEvent.onDefeat.Invoke();
         }
+
+        if(currentCourage >= maxCourage)
+        {
+            //sceneLoader.cs
+            LevelEvent.gotMaxCourage.Invoke();
+        }
     }
 }

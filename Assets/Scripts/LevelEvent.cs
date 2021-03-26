@@ -11,6 +11,7 @@ public static class LevelEvent
     public static ChangeCourageEvent onCollide = new ChangeCourageEvent();
     public static UnityEvent onVictory = new UnityEvent();
     public static UnityEvent onDefeat = new UnityEvent();
+    public static UnityEvent gotMaxCourage = new UnityEvent();
 }
 
 public class ChangeCourageEvent : UnityEvent<float> { }
