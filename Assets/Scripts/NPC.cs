@@ -34,6 +34,11 @@ public class NPC : MonoBehaviour
                     dialogueBox.text = dialogue.dialogue.text;
                 }
             }
+
+            if(state == State.NONE)
+            {
+                LevelEvent.onNoMask.Invoke(braveValue);
+            }
         }
 
         if(state == State.NONE)
