@@ -7,10 +7,11 @@ public static class LevelEvent
 {
     public static ChangeSceneEvent onChangeScene = new ChangeSceneEvent();
     public static ChangeMaskEvent onChangeMask = new ChangeMaskEvent();
-    public static NoMaskEvent onNoMask = new NoMaskEvent();
+    public static ChangeCourageEvent onNoMask = new ChangeCourageEvent();
+    public static ChangeCourageEvent onCollide = new ChangeCourageEvent();
 }
 
-public class NoMaskEvent : UnityEvent<float> { }
+public class ChangeCourageEvent : UnityEvent<float> { }
 public class ChangeMaskEvent : UnityEvent<State> { }
 public class ChangeSceneEvent : UnityEvent<ChangeSceneData>{ }
 public class ChangeSceneData

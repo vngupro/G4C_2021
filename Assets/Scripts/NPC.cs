@@ -6,6 +6,7 @@ using TMPro;
 public class NPC : MonoBehaviour
 {
     public List<NPCDialogue> dialogues = new List<NPCDialogue>();
+    public Dialogue collideDialogue;
     [SerializeField]
     public TMP_Text dialogueBox;
     private bool canShowDialogue = false;
@@ -44,11 +45,26 @@ public class NPC : MonoBehaviour
         }
     }
 
+    private void ShowOnCollideText()
+    {
+        dialogueBox.enabled = true;
+        dialogueBox.text = collideDialogue.text;
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             CanShowDialogue(false);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ShowOnCollideText();
+            //CourageBar.cs
+            LevelEvent.onCollide.Invoke(-Mathf.Abs(braveValue / 2.0f));
         }
     }
 
