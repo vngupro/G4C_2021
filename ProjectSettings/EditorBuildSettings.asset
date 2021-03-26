@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Areas/Gym.unity
     guid: 41047b89b3bb5db4bb38ea18236d76c8
+  - enabled: 1
+    path: Assets/Scenes/Areas/DefeatScreen.unity
+    guid: 3ed4edce0b684d5449a73a3b411e0f59
+  - enabled: 1
+    path: Assets/Scenes/Areas/VictoryScreen.unity
+    guid: cc38c7d5ff2ecf346a392a8431652f36
   m_configObjects: {}

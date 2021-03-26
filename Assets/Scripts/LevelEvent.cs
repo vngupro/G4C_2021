@@ -9,6 +9,8 @@ public static class LevelEvent
     public static ChangeMaskEvent onChangeMask = new ChangeMaskEvent();
     public static ChangeCourageEvent onNoMask = new ChangeCourageEvent();
     public static ChangeCourageEvent onCollide = new ChangeCourageEvent();
+    public static UnityEvent onVictory = new UnityEvent();
+    public static UnityEvent onDefeat = new UnityEvent();
 }
 
 public class ChangeCourageEvent : UnityEvent<float> { }

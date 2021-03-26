@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\BadgeSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGraphicRaycaster.cs" />
     <Compile Include="Assets\Scripts\SetMouseCursor.cs" />
+    <Compile Include="Assets\Scripts\FinalText.cs" />
+    <Compile Include="Assets\Scripts\DialogueList.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
