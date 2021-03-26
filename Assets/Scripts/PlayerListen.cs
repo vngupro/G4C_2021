@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class PlayerListen : MonoBehaviour
 {
-    List<Collider> savedFarNpcs = new List<Collider>();
     public LayerMask layer;
     private float minDistToTalk = 8.0f;
     private Collider npc;
-
-    SphereCollider sphere;
-    Mask mask;
+    private Mask mask;
     private void Awake()
     {
         //mask.cs
@@ -18,7 +15,6 @@ public class PlayerListen : MonoBehaviour
     }
     private void Start()
     {
-        sphere = GetComponent<SphereCollider>();
         mask = GetComponent<Mask>();
     }
 

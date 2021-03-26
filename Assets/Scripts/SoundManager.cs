@@ -21,8 +21,8 @@ public class SoundManager : MonoBehaviour
                 s.source.volume = s.volume;
                 s.source.pitch = s.pitch;
                 s.source.spatialBlend = s.spatialBlend;
-                //s.source.minDistance = s.minDist3D;
-                //s.source.maxDistance = s.maxDist3D;
+                s.source.minDistance = s.minDist3D;
+                s.source.maxDistance = s.maxDist3D;
                 s.source.mute = s.mute;
                 s.source.loop = s.loop;
                 s.source.playOnAwake = s.playOnAwake;

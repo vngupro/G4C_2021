@@ -39,7 +39,6 @@ public class SceneLoader : MonoBehaviour
         string sceneName = currentScene.name;
         if (sceneName == sceneToLoad)
         {
-            Debug.Log(sceneName + " " + sceneToLoad);
             EntranceScene[] allEntrance = FindObjectsOfType<EntranceScene>();
             
             foreach (EntranceScene entrance in allEntrance)
@@ -51,7 +50,6 @@ public class SceneLoader : MonoBehaviour
                     cineCam.LookAt = player.transform;
                     player.transform.position = entrance.transform.position;
                     player.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    Debug.Log(entrance.lastExitName + " " + exitName);
                     player.movement.controllerIsActive = true;
                     return;
                 }

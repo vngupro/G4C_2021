@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\MouseDragBehaviour.cs" />
     <Compile Include="Assets\Scripts\BadgePool.cs" />
     <Compile Include="Assets\Scripts\LevelEvent.cs" />
@@ -66,7 +65,6 @@
     <Compile Include="Assets\Scripts\ExitScene.cs" />
     <Compile Include="Assets\Scripts\Mask.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\CanvasSave.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\MaskSlot.cs" />
     <Compile Include="Assets\Scripts\MaskUI.cs" />
