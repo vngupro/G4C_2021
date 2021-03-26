@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour
     public TMP_Text dialogueBox;
     public bool canGetLastDialogue = false;
     public bool canShowDialogue = false;
+
+    public float braveValue = 0;
     private void Start()
     {
         dialogueBox.text = dialogues[0].dialogue.text;
@@ -29,22 +31,17 @@ public class NPC : MonoBehaviour
         {
             foreach (NPCDialogue dialogue in dialogues)
             {
-                if (!canGetLastDialogue)
+                if (dialogue.state == state)
                 {
-                    if (dialogue.state == state && state != State.FULLMASK)
-                    {
-                        dialogueBox.text = dialogue.dialogue.text;
-                    }
-                }
-                else
-                {
-                    if (dialogue.state == state)
-                    {
-                        dialogueBox.text = dialogue.dialogue.text;
-                    }
+                    dialogueBox.text = dialogue.dialogue.text;
                 }
             }
             Debug.Log("Get New Dialogue ");
+        }
+
+        if(state == State.NONE)
+        {
+            LevelEvent.onNoMask.Invoke(braveValue);
         }
     }
 
