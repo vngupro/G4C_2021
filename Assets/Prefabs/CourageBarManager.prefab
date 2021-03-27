@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 3329410478998297971}
   - component: {fileID: 3329410478998297970}
   m_Layer: 5
-  m_Name: CourageBar_UI
+  m_Name: CourageBarManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
