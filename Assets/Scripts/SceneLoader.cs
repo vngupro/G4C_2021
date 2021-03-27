@@ -43,6 +43,7 @@ public class SceneLoader : MonoBehaviour
 
     private void StartReplay()
     {
+        player.movement.controllerIsActive = false;
         player.transform.position = playerStartPos;
         SceneManager.LoadScene("PlayerRoom");
     }
@@ -83,6 +84,7 @@ public class SceneLoader : MonoBehaviour
                 }
             }
         }
+        player.movement.controllerIsActive = true;
 
 
     }
