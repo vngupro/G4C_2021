@@ -81,14 +81,27 @@ public class MaskManager : MonoBehaviour
             case State.NONE:
                 textBox.text = "0/4";
                 image.sprite = sprites[4];
+                ResetMask();
                 break;
             default:
                 textBox.text = "0/4";
                 image.sprite = sprites[4];
+                ResetMask();
                 break;
         }
     }
 
+    public void ResetMask()
+    {
+        StartCoroutine(PutFullMask());
+        textBox.text = "4/4";
+        image.sprite = sprites[0];
+        state = State.FULLMASK;
+    }
+    public IEnumerator PutFullMask()
+    {
+        yield return new WaitForSeconds(3.0f);
+    }
     //public void OpenMask()
     //{
     //    maskOpen.SetActive(false);
