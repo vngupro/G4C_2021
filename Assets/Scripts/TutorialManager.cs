@@ -24,17 +24,25 @@ public class TutorialManager : MonoBehaviour
     public void Start()
     {
         this.gameObject.SetActive(true);
-        courageBarManager.SetActive(false);
-        maskManager.SetActive(false);
-        canvas.SetActive(false);
+        //courageBarManager.SetActive(false);
+        //maskManager.SetActive(false);
+        //canvas.SetActive(false);
         player.movement.controllerIsActive = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            CloseTutorial();
+        }
     }
     public void CloseTutorial()
     {
         this.gameObject.SetActive(false);
-        courageBarManager.SetActive(true);
-        maskManager.SetActive(true);
-        canvas.SetActive(true);
+        //courageBarManager.SetActive(true);
+        //maskManager.SetActive(true);
+        //canvas.SetActive(true);
         player.movement.controllerIsActive = true;
     }
 }
