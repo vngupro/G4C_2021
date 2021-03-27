@@ -10,6 +10,8 @@ public class SceneLoader : MonoBehaviour
     private CinemachineVirtualCamera cineCam;
     private PlayerSpawner player;
     private Vector3 playerStartPos;
+    public CanvasGroup canvas;
+    private float duration = 1f;
     private static string exitName = "";
     private static string sceneToLoad = "";
     
@@ -91,6 +93,20 @@ public class SceneLoader : MonoBehaviour
 
     public void OnEnteredExitTrigger(ChangeSceneData data)
     {
+
+        StartCoroutine(TransitionToScene(data));
+    }
+
+    IEnumerator TransitionToScene(ChangeSceneData data)
+    {
+        float counter = 0f;
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            canvas.alpha = Mathf.Lerp(0, 1.0f, counter / duration);
+            yield return null;
+        }
+        //yield return new WaitForSeconds(3.0f);
         //Load Scene
         exitName = data.exitName;
         sceneToLoad = data.sceneName;
@@ -99,6 +115,13 @@ public class SceneLoader : MonoBehaviour
             //couragebar.cs
             LevelEvent.onGetToLastScene.Invoke();
         }
-        SceneManager.LoadScene(data.sceneName); 
+        SceneManager.LoadScene(data.sceneName);
+        counter = 0f;
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            canvas.alpha = Mathf.Lerp(1.0f, 0, counter / duration);
+            yield return null;
+        }
     }
  }
