@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: DefeatText
   m_EditorClassIdentifier: 
   stringList:
-  - text 1
-  - text2
+  - Well, this has been a thoroughly draining day.
+  - "When you have to mask, if you don\u2019t learn to spot who it isn\u2019t safe
+    to be yourself around, you\u2019re going to get hurt."
+  - The best thing you can do now is get some rest and try again tomorrow.
