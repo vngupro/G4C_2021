@@ -241,9 +241,10 @@ MonoBehaviour:
   startCourage: 80
   currentCourage: 0
   couragebar: {fileID: 1014085583}
-  redScreen: {fileID: 4678598228818626194}
-  greenScreen: {fileID: 4778272598750822514}
+  redScreen: {fileID: 6134469088040680556}
+  greenScreen: {fileID: 6590987780181787902}
   fadeScreenFactor: 0.1
+  duration: 0.4
 --- !u!114 &7102145150471019994
 MonoBehaviour:
   m_ObjectHideFlags: 0

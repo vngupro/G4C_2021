@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: VictoryText
   m_EditorClassIdentifier: 
   stringList:
-  - text 1
-  - text 2
+  - Congratulations!
+  - With a community and courage found, you can withstand just about anything the
+    world will throw at you, even without your mask.
