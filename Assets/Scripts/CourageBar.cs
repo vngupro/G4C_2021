@@ -30,14 +30,13 @@ public class CourageBar: MonoBehaviour
         source = GetComponent<CinemachineImpulseSource>();
     }
 
-    private void ChangeSceneCost()
-    {
-        currentCourage -= 20;
-        couragebar.SetCourage(currentCourage);
-    }
 
     // Start is called before the first frame update
     void Start()
+    {
+        ResetParameters();
+    }
+    public void ResetParameters()
     {
         currentCourage = startCourage;
         couragebar.SetMaxCourage(maxCourage);
@@ -45,7 +44,11 @@ public class CourageBar: MonoBehaviour
         redScreen.alpha = 0f;
         greenScreen.alpha = 0f;
     }
-
+    private void ChangeSceneCost()
+    {
+        currentCourage -= 20;
+        couragebar.SetCourage(currentCourage);
+    }
     void TakeDamage(float damage)
     {
         currentCourage += damage;
