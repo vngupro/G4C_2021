@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     private bool canShowDialogue = false;
     private DialogueType dialogueType;
     public float braveValue = 0;
+    private bool hasTalkToPlayer = false;
     private void Start()
     {
         dialogueBox.text = dialogues[0].dialogue.text;
@@ -37,10 +38,11 @@ public class NPC : MonoBehaviour
                 }
             }
 
-            if(state == State.NONE)
+            if(state == State.NONE && !hasTalkToPlayer)
             {
                 //CourageBar.cs
                 LevelEvent.onNoMask.Invoke(braveValue);
+                hasTalkToPlayer = true;
             }
         }
     }
