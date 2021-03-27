@@ -68,7 +68,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Background
     clip: {fileID: 8300000, guid: d3c5eba8ad43e364fb8d87da31febd83, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     spatialBlend: 0
     minDist3D: 0
