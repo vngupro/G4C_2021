@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
 {
     private CinemachineVirtualCamera cineCam;
     private PlayerSpawner player;
+    private CourageBar courageBar;
     private Vector3 playerStartPos;
     public CanvasGroup canvas;
     private float duration = 1f;
@@ -25,6 +26,7 @@ public class SceneLoader : MonoBehaviour
             SceneManager.sceneLoaded += OnSceneLoaded;
             player = FindObjectOfType<PlayerSpawner>();
             cineCam = FindObjectOfType<CinemachineVirtualCamera>();
+            courageBar = FindObjectOfType<CourageBar>();
             playerStartPos = player.transform.position;
             //Invoke ExitScene.cs
             LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
@@ -47,6 +49,7 @@ public class SceneLoader : MonoBehaviour
     {
         player.movement.controllerIsActive = false;
         player.transform.position = playerStartPos;
+        courageBar.ResetParameters();
         SceneManager.LoadScene("PlayerRoom");
     }
 
