@@ -13,6 +13,7 @@ public static class LevelEvent
     public static UnityEvent onVictory = new UnityEvent();
     public static UnityEvent onDefeat = new UnityEvent();
     public static UnityEvent gotMaxCourage = new UnityEvent();
+    public static UnityEvent onReplay = new UnityEvent();
 }
 
 public class ChangeCourageEvent : UnityEvent<float> { }

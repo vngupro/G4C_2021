@@ -9,9 +9,10 @@ public class SceneLoader : MonoBehaviour
 {
     private CinemachineVirtualCamera cineCam;
     private PlayerSpawner player;
+    private Vector3 playerStartPos;
     private static string exitName = "";
     private static string sceneToLoad = "";
-
+    
     private static SceneLoader _instance;
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class SceneLoader : MonoBehaviour
             SceneManager.sceneLoaded += OnSceneLoaded;
             player = FindObjectOfType<PlayerSpawner>();
             cineCam = FindObjectOfType<CinemachineVirtualCamera>();
+            playerStartPos = player.transform.position;
             //Invoke ExitScene.cs
             LevelEvent.onChangeScene.AddListener(OnEnteredExitTrigger);
 
@@ -29,11 +31,20 @@ public class SceneLoader : MonoBehaviour
             LevelEvent.onVictory.AddListener(ShowVictoryScreen);
             LevelEvent.onDefeat.AddListener(ShowDefeatScreen);
             LevelEvent.gotMaxCourage.AddListener(ShowVictoryScreen);
+
+            //finalText.cs
+            LevelEvent.onReplay.AddListener(StartReplay);
         }
         else
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void StartReplay()
+    {
+        player.transform.position = playerStartPos;
+        SceneManager.LoadScene("PlayerRoom");
     }
 
     private void ShowDefeatScreen()

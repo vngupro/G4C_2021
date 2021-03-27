@@ -59,9 +59,9 @@
     <Compile Include="Assets\Scripts\MouseDragBehaviour.cs" />
     <Compile Include="Assets\Scripts\BadgePool.cs" />
     <Compile Include="Assets\Scripts\LevelEvent.cs" />
+    <Compile Include="Assets\Scripts\DialogueList.cs" />
     <Compile Include="Assets\Scripts\Badge.cs" />
     <Compile Include="Assets\Scripts\PlayerListen.cs" />
-    <Compile Include="Assets\Scripts\CourageBarUI.cs" />
     <Compile Include="Assets\Scripts\ExitScene.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\CourageBar.cs" />
@@ -73,18 +73,18 @@
     <Compile Include="Assets\Scripts\NPCDialogue.cs" />
     <Compile Include="Assets\Scripts\StateCollection.cs" />
     <Compile Include="Assets\Scripts\EntranceScene.cs" />
+    <Compile Include="Assets\Scripts\MaskGraphicRaycaster.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Billboard.cs" />
+    <Compile Include="Assets\Scripts\FinalText.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueType.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\SetMouseCursor.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\BadgeSlot.cs" />
-    <Compile Include="Assets\Scripts\MaskGraphicRaycaster.cs" />
-    <Compile Include="Assets\Scripts\SetMouseCursor.cs" />
-    <Compile Include="Assets\Scripts\FinalText.cs" />
-    <Compile Include="Assets\Scripts\DialogueList.cs" />
+    <Compile Include="Assets\Scripts\CourageBarUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

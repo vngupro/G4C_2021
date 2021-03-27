@@ -9,7 +9,6 @@ public class FinalText : MonoBehaviour
     public TMP_Text buttonTextBox;
     public DialogueList dialogueList;
     private int count;
-
     private void Start()
     {
         textBox.text = dialogueList.stringList[count];
@@ -19,7 +18,7 @@ public class FinalText : MonoBehaviour
     {
         if (count == dialogueList.stringList.Count)
         {
-            SceneManager.LoadScene("PlayerRoom");
+            LevelEvent.onReplay.Invoke();
             return;
         }
         textBox.text = dialogueList.stringList[count];
