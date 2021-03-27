@@ -8,6 +8,19 @@ public class TutorialManager : MonoBehaviour
     public GameObject maskManager;
     public GameObject canvas;
     public PlayerSpawner player;
+    private static TutorialManager _instance;
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public void Start()
     {
         this.gameObject.SetActive(true);
