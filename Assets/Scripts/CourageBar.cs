@@ -11,9 +11,11 @@ public class CourageBar: MonoBehaviour
     public float startCourage = 80.0f;
     public float currentCourage;
     public CourageBarUI couragebar;
-    public Image redScreen;
-    public Image greenScreen;
+    public CanvasGroup redScreen;
+    public CanvasGroup greenScreen;
     public float fadeScreenFactor = 0.1f;
+    private bool mFaded = false;
+    public float duration = 0.4f;
 
     private CinemachineImpulseSource source;
 
@@ -40,34 +42,10 @@ public class CourageBar: MonoBehaviour
         currentCourage = startCourage;
         couragebar.SetMaxCourage(maxCourage);
         couragebar.SetCourage(currentCourage);
-
-        greenScreen.enabled = false;
-        redScreen.enabled = false;
+        redScreen.alpha = 0f;
+        greenScreen.alpha = 0f;
     }
 
-    void Update()
-    {
-        if (redScreen.enabled)
-        {
-            Color color = redScreen.color;
-            color.a -= fadeScreenFactor;
-            if(color.a <= 0f)
-            {
-                redScreen.enabled = false;
-            }
-        }
-
-        if (greenScreen.enabled)
-        {
-            Color color = greenScreen.color;
-            color.a -= fadeScreenFactor;
-
-            if (color.a <= 0f)
-            {
-                greenScreen.enabled = false;
-            }
-        }
-    }
     void TakeDamage(float damage)
     {
         currentCourage += damage;
@@ -75,15 +53,13 @@ public class CourageBar: MonoBehaviour
         if(damage < 0f)
         {
             source.GenerateImpulse();
-            redScreen.enabled = true;
             FindObjectOfType<SoundManager>().PlaySound("Damage");
-
+            Fade(redScreen);
         }
         else
         {
-            greenScreen.enabled = true;
             FindObjectOfType<SoundManager>().PlaySound("Heal");
-            Debug.Log("Heal");
+            Fade(greenScreen);
         }
         
         if(currentCourage <= 0f)
@@ -97,6 +73,24 @@ public class CourageBar: MonoBehaviour
             currentCourage = maxCourage;
             //sceneLoader.cs
             LevelEvent.gotMaxCourage.Invoke();
+        }
+    }
+
+    public void Fade(CanvasGroup canva)
+    {
+        var canvGroup = canva;
+        StartCoroutine(DoFade(canvGroup));
+
+        mFaded = !mFaded;
+    }
+    public IEnumerator DoFade(CanvasGroup canva)
+    {
+        float counter = 0f;
+        while(counter < duration)
+        {
+            counter += Time.deltaTime;
+            canva.alpha = Mathf.Lerp(1.0f, 0, counter / duration);
+            yield return null;
         }
     }
 }
