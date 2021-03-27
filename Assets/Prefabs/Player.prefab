@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 5ed9f55a66540a44dbfcebaf2d05f2c7, type: 3}
+  cursorTalk: {fileID: 2800000, guid: 8dcfe96562c017e4eb82e8503b92305b, type: 3}
 --- !u!114 &9033084067475416560
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,10 +8,11 @@ public class PlayerListen : MonoBehaviour
     private float minDistToTalk = 8.0f;
     private Collider npc;
     public MaskManager mask;
-
+    private SetMouseCursor cursor;
     private int count = 0;
     private void Awake()
     {
+        cursor = GetComponent<SetMouseCursor>();
         //mask.cs
         LevelEvent.onChangeMask.AddListener(ListenAgain);
     }
@@ -19,6 +20,17 @@ public class PlayerListen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray rayHover = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hoverHitInfo;
+        if (Physics.Raycast(rayHover, out hoverHitInfo, 500, layer))
+        {
+            cursor.ChangeCursorOnNPC();
+        }
+        else
+        {
+            cursor.SetInitialCursor();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
