@@ -87,8 +87,6 @@ public class SceneLoader : MonoBehaviour
             }
         }
         player.movement.controllerIsActive = true;
-
-
     }
 
     public void OnEnteredExitTrigger(ChangeSceneData data)

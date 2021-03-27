@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerListen : MonoBehaviour
 {
     public LayerMask layer;
-    private float minDistToTalk = 8.0f;
+    private float minDistToTalk = 12.0f;
     private Collider npc;
     public MaskManager mask;
     private SetMouseCursor cursor;
